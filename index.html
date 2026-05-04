@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter | Pastel Minimal</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for the arrow icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="converter-card">
+        <header>
+            <h1>Currency Converter</h1>
+        </header>
+        
+        <form id="converter-form">
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" value="1" step="any" placeholder="Enter amount">
+            </div>
+
+            <div class="selection-row">
+                <div class="currency-select">
+                    <label>From</label>
+                    <div class="select-wrapper">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="USA Flag" class="flag-icon" id="from-flag">
+                        <select name="from" id="from-currency"></select>
+                    </div>
+                </div>
+
+                <div class="separator">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+
+                <div class="currency-select">
+                    <label>To</label>
+                    <div class="select-wrapper">
+                        <img src="https://flagsapi.com/IN/flat/64.png" alt="India Flag" class="flag-icon" id="to-flag">
+                        <select name="to" id="to-currency"></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-container" id="result-text">
+                <p class="exchange-rate">1 USD = 83.45 INR</p>
+            </div>
+
+            <button type="submit" class="convert-btn">Convert</button>
+        </form>
+    </div>
+
+    <script src="codes.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
